@@ -1,0 +1,46 @@
+.primary-color{
+    -fx-background-color: #383838;
+}
+
+.secondary-color{
+    -fx-background-color: #282828;
+}
+
+.web-view{
+    -fx-background-radius: 5;
+}
+
+.buttons{
+    -fx-background-color: #3c3c3c;
+    -fx-background-radius: 5;
+}
+
+.buttons:hover{
+    -fx-background-color: #323232;
+}
+
+.buttons:pressed{
+    -fx-background-color: #232323;
+}
+
+.input{
+	-fx-background-color: #3c3c3c;
+	-fx-text-fill: #e7e7e7;
+	-fx-background-radius: 5;
+}
+
+.input:hover{
+    -fx-background-color: #323232;
+}
+
+.progress-bar {
+    -fx-background-color: #383838; /* Cor de fundo da ProgressBar */
+}
+
+.progress-bar .track {
+    -fx-background-color: #282828; /* Cor do rastreador */
+}
+
+.progress-bar .thumb {
+    -fx-background-color: #11d3d6; /* Cor do indicador */
+}
