@@ -3,16 +3,22 @@ package gui;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("jbrowser.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("jbrowser.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("jbrowser.fxml"));
+        Parent root = loader.load();
+        JBrowserController controller = loader.getController();
+        controller.setStg(stage);
         stage.setScene(new Scene(root));
-//        stage.initStyle(StageStyle.UNDECORATED);
-        //TODO: Tirar a decoração da janela e fazer de forma personalizada
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("JBrowser");
+//        stage.getIcons().add(new Image("file:" + System.getProperty("user.dir").replace("/","\\") + ""));
         stage.setMinWidth(800);
         stage.setMinHeight(600);
         stage.setResizable(true);

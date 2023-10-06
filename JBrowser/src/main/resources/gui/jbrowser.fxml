@@ -14,10 +14,61 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<BorderPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="primary-color" stylesheets="@style/darkMode.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.JBrowserController">
+<BorderPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="800.0" styleClass="primary-color" stylesheets="@style/darkMode.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.JBrowserController">
    <top>
-      <VBox maxHeight="50.0" minHeight="50.0" prefHeight="50.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
+      <VBox maxHeight="70.0" minHeight="70.0" prefHeight="70.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
          <children>
+            <HBox fx:id="hbWindowBar" alignment="CENTER_LEFT" maxHeight="20.0" minHeight="20.0" prefHeight="20.0">
+               <children>
+                  <Button fx:id="btnClose" alignment="CENTER" maxHeight="12.0" maxWidth="12.0" minHeight="12.0" minWidth="12.0" mnemonicParsing="false" onAction="#close" prefHeight="12.0" prefWidth="12.0" styleClass="button-window-close">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="imgClose" fitHeight="4.0" fitWidth="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/close-lg-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnMinimize" alignment="CENTER" maxHeight="12.0" maxWidth="12.0" minHeight="12.0" minWidth="12.0" mnemonicParsing="false" onAction="#minimaze" prefHeight="12.0" prefWidth="12.0" styleClass="button-window-min">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="imgMinimize" fitHeight="8.0" fitWidth="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/remove-minus-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnMaximize" alignment="CENTER" maxHeight="12.0" maxWidth="12.0" minHeight="12.0" minWidth="12.0" mnemonicParsing="false" onAction="#maxmize" prefHeight="12.0" prefWidth="12.0" styleClass="button-window-max">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="imgMaximize" fitHeight="8.0" fitWidth="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/expand-svgrepo-com.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="lbWindowTitle" textFill="#f8f8f8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
             <HBox alignment="BOTTOM_CENTER" maxHeight="36.0" minHeight="36.0" prefHeight="36.0" styleClass="secondary-color">
                <children>
                   <Button fx:id="btnArrowLeft" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" mnemonicParsing="false" onAction="#back" prefHeight="28.0" prefWidth="28.0" styleClass="buttons">

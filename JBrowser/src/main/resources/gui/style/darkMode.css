@@ -30,17 +30,32 @@
 }
 
 .input:hover{
-    -fx-background-color: #323232;
+	-fx-background-color: #323232;
 }
 
 .progress-bar {
-    -fx-background-color: #383838; /* Cor de fundo da ProgressBar */
+	-fx-background-color: #383838; /* Cor de fundo da ProgressBar */
 }
 
 .progress-bar .track {
-    -fx-background-color: #282828; /* Cor do rastreador */
+	-fx-background-color: #282828; /* Cor do rastreador */
 }
 
 .progress-bar .thumb {
-    -fx-background-color: #11d3d6; /* Cor do indicador */
+	-fx-background-color: #11d3d6; /* Cor do indicador */
+}
+
+.button-window-close{
+	-fx-background-color: #eb5a55;
+	-fx-background-radius: 100;
+}
+
+.button-window-max{
+	-fx-background-color: #65cb43;
+	-fx-background-radius: 100;
+}
+
+.button-window-min{
+	-fx-background-color:#f6bc3e;
+	-fx-background-radius: 100;
 }
