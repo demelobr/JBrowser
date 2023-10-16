@@ -3,7 +3,6 @@ package gui;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -11,7 +10,6 @@ public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("jbrowser.fxml"));
-//        Parent root = FXMLLoader.load(getClass().getResource("jbrowser.fxml"));
         Parent root = loader.load();
         JBrowserController controller = loader.getController();
         controller.setStg(stage);

@@ -42,7 +42,27 @@
 }
 
 .progress-bar .thumb {
-	-fx-background-color: #11d3d6; /* Cor do indicador */
+	-fx-background-color: #0092C2; /* Cor do indicador */
+}
+
+.tabPane{
+    -fx-tab-min-width: 100px;
+    -fx-tab-min-height: 25px;
+    -fx-tab-max-width: 100px;
+    -fx-tab-max-height: 25px;
+}
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: #282828;
+}
+
+.tab{
+    -fx-background-color: #323232;
+    -fx-text-fill: #e7e7e7;
+}
+
+.tab:selected{
+    -fx-background-color: #3c3c3c;
 }
 
 .button-window-close{

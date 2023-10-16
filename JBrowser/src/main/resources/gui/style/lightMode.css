@@ -42,7 +42,27 @@
 }
 
 .progress-bar .thumb {
-	-fx-background-color: #11d3d6; /* Cor do indicador */
+	-fx-background-color: #0092C2; /* Cor do indicador */
+}
+
+.tabPane{
+    -fx-tab-min-width: 100px;
+    -fx-tab-min-height: 25px;
+    -fx-tab-max-width: 100px;
+    -fx-tab-max-height: 25px;
+}
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: #f8f8f8;
+}
+
+.tab{
+    -fx-background-color: #cbcbcb;
+    -fx-text-fill: #e7e7e7;
+}
+
+.tab:selected{
+    -fx-background-color: #b3b3b3;
 }
 
 .button-window-close{
@@ -61,5 +81,4 @@
 }
 
 /*MUDAR A COR NO PROMPTTEXT NO MODO LIGTH*/
-/*MUDAR A COR DOS ÍCONES PARA #FFFFFF */
 /*CORRIGIR BUG NO BTN CLOSE QUANDO FICA VISIBLE FALSE*/
