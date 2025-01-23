@@ -1,0 +1,92 @@
+.primary-color{
+    -fx-background-color: #ffffff;
+}
+
+.secondary-color{
+    -fx-background-color: #f8f8f8;
+}
+
+.border-radius{
+    -fx-background-radius: 10;
+}
+
+.buttons{
+    -fx-background-color: #cbcbcb;
+    -fx-background-radius: 10;
+}
+
+.buttons:hover{
+    -fx-background-color: #c9b8b5;
+}
+
+.buttons:pressed{
+    -fx-background-color: #b3b3b3;
+}
+
+.buttons-action{
+    -fx-background-color: #2ce7e3;
+    -fx-background-radius: 10;
+}
+
+.buttons-action:hover{
+    -fx-background-color: #1dd4d1;
+}
+
+.buttons-action:pressed{
+    -fx-background-color: #0fc0be;
+}
+
+.buttons-disable{
+    -fx-background-color: #cbcbcb;
+    -fx-background-radius: 10;
+}
+
+.buttons-disable:hover{
+    -fx-background-color: #c9b8b5;
+}
+
+.buttons-disable:pressed{
+    -fx-background-color: #b3b3b3;
+}
+
+.input{
+	-fx-background-color: #cbcbcb;
+	-fx-text-fill: #e7e7e7;
+	-fx-background-radius: 10;
+}
+
+.input:hover{
+	-fx-background-color: #b3b3b3;
+}
+
+.progress-bar {
+	-fx-background-color: #ffffff; /* Cor de fundo da ProgressBar */
+}
+
+.progress-bar .track {
+	-fx-background-color: #f8f8f8; /* Cor do rastreador */
+}
+
+.progress-bar .thumb {
+	-fx-background-color: #0092C2; /* Cor do indicador */
+}
+
+.tabPane{
+    -fx-tab-min-width: 100px;
+    -fx-tab-min-height: 25px;
+    -fx-tab-max-width: 100px;
+    -fx-tab-max-height: 25px;
+}
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: #f8f8f8;
+}
+
+.tab{
+    -fx-background-color: #cbcbcb;
+    -fx-text-fill: #e7e7e7;
+}
+
+.tab:selected{
+    -fx-background-color: #b3b3b3;
+}

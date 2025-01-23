@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="secondary-color" stylesheets="@darkMode.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.browser.MainController">
+   <top>
+      <VBox maxHeight="44.0" minHeight="44.0" prefHeight="44.0" stylesheets="@darkMode.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" maxHeight="36.0" minHeight="36.0" prefHeight="36.0" styleClass="secondary-color">
+               <children>
+                  <Button fx:id="btnArrowLeft" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" mnemonicParsing="false" onAction="#back" prefHeight="28.0" prefWidth="28.0" styleClass="buttons">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@arrow-left-white.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="4.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnArrowRight" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" mnemonicParsing="false" onAction="#forward" prefHeight="28.0" prefWidth="28.0" styleClass="buttons">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@arrow-right-white.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="4.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnReload" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" mnemonicParsing="false" onAction="#reload" prefHeight="28.0" prefWidth="28.0" styleClass="buttons">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@refresh-white.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <HBox alignment="CENTER" maxHeight="28.0" maxWidth="500.0" minHeight="28.0" minWidth="500.0" prefHeight="28.0" prefWidth="500.0" styleClass="input">
+                     <children>
+                        <TextField fx:id="tfUrlBar" maxHeight="28.0" maxWidth="446.0" minHeight="28.0" minWidth="446.0" onKeyPressed="#textEnterKey" prefHeight="28.0" prefWidth="446.0" styleClass="input">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btnClear" alignment="CENTER" maxHeight="24.0" maxWidth="24.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onAction="#clear" prefHeight="24.0" prefWidth="24.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@close-white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" top="2.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnFavorite" alignment="CENTER" layoutX="483.0" layoutY="10.0" maxHeight="24.0" maxWidth="24.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onAction="#favorite" prefHeight="24.0" prefWidth="24.0" styleClass="buttons">
+                           <graphic>
+                              <ImageView fx:id="imgFavorite" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@star-white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <Button fx:id="btnNewTab" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" mnemonicParsing="false" onAction="#addNewTab" prefHeight="28.0" prefWidth="28.0" styleClass="buttons">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@add-white.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="4.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnMode" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" mnemonicParsing="false" onAction="#changeMode" prefHeight="28.0" prefWidth="28.0" styleClass="buttons">
+                     <graphic>
+                        <ImageView fx:id="imgMode" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sun-white.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets right="4.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnMenu" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" mnemonicParsing="false" onAction="#menu" prefHeight="28.0" prefWidth="28.0" styleClass="buttons">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@menu-white.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" maxHeight="8.0" minHeight="8.0" prefHeight="8.0" styleClass="secondary-color">
+               <children>
+                  <ProgressBar fx:id="pbProgressBar" maxHeight="8.0" maxWidth="500.0" minHeight="8.0" minWidth="500.0" prefHeight="8.0" prefWidth="500.0" progress="0.0" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="8.0" right="8.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane fx:id="tpWindow" prefHeight="535.0" prefWidth="800.0" stylesheets="@darkMode.css" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+               <styleClass>
+                  <String fx:value="tabPane" />
+                  <String fx:value="border-radius" />
+               </styleClass></TabPane>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>
